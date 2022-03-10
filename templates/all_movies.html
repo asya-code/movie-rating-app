@@ -7,14 +7,12 @@
     {% for movie in movies %}
         <li>
             <a href="/movies/{{ movie.movie_id }}">{{ movie.title }}</a>
-       <!---
+
             <img src="{{ movie.poster_path }}"
-            style="border-radius: 3px;
-            border: 3px solid black;
-            width: 1em;
-            height: 2em;
+            style="width: 25em;
+            height: 25em;
             margin: 2em;
-            padding: 1em;> -->
+            padding: 1em;">
         </li>
     {% endfor %}
     </ul>
