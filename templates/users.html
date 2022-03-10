@@ -1,0 +1,15 @@
+{% extends 'base.html' %} 
+
+{% block title %} All users {% endblock %}
+
+{% block body %}
+{% if 'current_user' in session %}
+    <ul>
+    {% for user in users %}
+        <li>
+            <a href="/users/{{ user.user_id }}">{{ user.user_id }} {{ user.email }} </a>
+        </li>
+    {% endfor %}
+    </ul>
+{% endif %}
+{% endblock %} 
